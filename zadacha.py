@@ -7,6 +7,9 @@ screen = pg.display.set_mode((widht, height))
 x = 150
 y = 150
 step = 1
+r = 20
+g = 200
+b = 10
 
 running = True
 while running:
@@ -46,6 +49,15 @@ while running:
         x = 150
         y = 150
     
+    if x == 300 or x == 100 or y == 100 or y == 300:
+        r = 200
+        g = 10
+        b = 6
+        
+    if x == 300 or x == 100 or y == 100 or y == 300:
+        step = 10
+        
+
 
 
     if x < 0:
@@ -57,5 +69,5 @@ while running:
     if y > 400:
         y = 400
 
-    pg.draw.rect(screen, (23,50,40),(x,y,100,100),0,2110)
+    pg.draw.rect(screen, (r,g,b),(x,y,100,100),0,2110)
     pg.display.update()
